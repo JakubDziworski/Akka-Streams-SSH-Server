@@ -1,5 +1,6 @@
+package com.jakubdziworski.akka_ssh_server
+
 import akka.http.scaladsl.testkit.{ScalatestRouteTest, WSProbe}
-import com.jakubdziworski.akka_ssh_server.{Encryption, SshConstants,Server}
 import org.scalatest.{FunSuite, GivenWhenThen, Matchers}
 
 /**

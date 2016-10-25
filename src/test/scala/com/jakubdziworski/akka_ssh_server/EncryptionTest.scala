@@ -1,4 +1,5 @@
-import com.jakubdziworski.akka_ssh_server.Encryption
+package com.jakubdziworski.akka_ssh_server
+
 import org.scalatest.{FunSuite, Matchers}
 
 /**
