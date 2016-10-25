@@ -1,6 +1,5 @@
 import akka.http.scaladsl.testkit.{ScalatestRouteTest, WSProbe}
-import com.jakubdziworski.akka_ssh_server
-import com.jakubdziworski.akka_ssh_server.{Encryption, SshConstants}
+import com.jakubdziworski.akka_ssh_server.{Encryption, SshConstants,Server}
 import org.scalatest.{FunSuite, GivenWhenThen, Matchers}
 
 /**
@@ -15,7 +14,7 @@ class SshConnectionTest extends FunSuite with Matchers with ScalatestRouteTest w
     val f = SshConstants.G.pow(y).mod(SshConstants.P) //RFC: f = g^y mod p
     val key = f.pow(x).mod(SshConstants.P).toString() //RFC: C then computes K = f^x
     val alice = WSProbe()
-    val bob = new akka_ssh_server.Server(randomValueProvider = () => y)
+    val bob = new Server(randomValueProvider = () => y)
     And("simple command")
     val command = "whats up dude"
     val expectedResponse = "I've received 'whats up dude'"
