@@ -1,3 +1,4 @@
+import com.jakubdziworski.akka_ssh_server.Encryption
 import org.scalatest.{FunSuite, Matchers}
 
 /**

@@ -1,43 +1,12 @@
-/**
-  * Created by 'Jakub Dziworski' on 23.10.16
-  */
+package com.jakubdziworski.akka_ssh_server
 
 import java.security.MessageDigest
 import java.util
 import javax.crypto.Cipher
 import javax.crypto.spec.SecretKeySpec
+
 import org.apache.commons.codec.binary.Base64
 
-/**
-  * Sample:
-  * {{{
-  *   scala> val key = "My very own, very private key here!"
-  *
-  *   scala> Encryption.encrypt(key, "pula, pizda, coaiele!")
-  *   res0: String = 9R2vVgkqEioSHyhvx5P05wpTiyha1MCI97gcq52GCn4=
-  *
-  *   scala> Encryption.decrypt(key", res0)
-  *   res1: String = pula, pizda, coaiele!
-  * }}}
-  */
-import java.security.MessageDigest
-import java.util
-import javax.crypto.Cipher
-import javax.crypto.spec.SecretKeySpec
-import org.apache.commons.codec.binary.Base64
-
-/**
-  * Sample:
-  * {{{
-  *   scala> val key = "My very own, very private key here!"
-  *
-  *   scala> Encryption.encrypt(key, "pula, pizda, coaiele!")
-  *   res0: String = 9R2vVgkqEioSHyhvx5P05wpTiyha1MCI97gcq52GCn4=
-  *
-  *   scala> Encryption.decrypt(key", res0)
-  *   res1: String = pula, pizda, coaiele!
-  * }}}
-  */
 object Encryption {
   def encrypt(key: String, value: String): String = {
     val cipher: Cipher = Cipher.getInstance("AES/ECB/PKCS5Padding")
@@ -59,6 +28,5 @@ object Encryption {
     new SecretKeySpec(keyBytes, "AES")
   }
 
-  private val SALT: String =
-    "gfdgfdsgdfk5695i09jgfkln^72k"
+  private val SALT: String = "gfdgfdsgdfk5695i09jgfkln^72k"
 }
