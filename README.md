@@ -1,4 +1,4 @@
-# Akka-Streams-SSH-Server
+# Akka Streams Mini SSH Server
 
 [![Build Status](https://travis-ci.org/JakubDziworski/Akka-Streams-SSH-Server.svg?branch=master)](https://travis-ci.org/JakubDziworski/Akka-Streams-SSH-Server)
 
